@@ -1,0 +1,6 @@
+<div *ngIf="pageLogin">
+  <app-auth-login (evento)="ocultarLogin()"></app-auth-login>
+</div>
+<div *ngIf="!pageLogin">
+  <app-signup></app-signup>
+</div>

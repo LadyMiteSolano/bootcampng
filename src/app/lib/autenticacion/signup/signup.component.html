@@ -1,0 +1,40 @@
+<div class="form-control w-25 position-absolute start-50 top-50 translate-middle">
+  <div>
+      <h2>Registro de usuario</h2>
+  </div>
+  <form>
+      <div>
+          <label for="emailuser">Nombre: </label>
+          <input type="email" class="form-control" [(ngModel)]="nombre" [ngModelOptions]="{standalone: true}"
+              id="emailuser" />
+      </div>
+      <div>
+          <label for="emailuser">Apellido: </label>
+          <input type="email" class="form-control" [(ngModel)]="apellido" [ngModelOptions]="{standalone: true}"
+              id="emailuser" />
+      </div>
+      <div>
+          <label for="emailuser">Celular: </label>
+          <input type="email" class="form-control" [(ngModel)]="celular" [ngModelOptions]="{standalone: true}"
+              id="emailuser" />
+      </div>
+      <div>
+          <label for="emailuser">Email: </label>
+          <input type="email" class="form-control" [(ngModel)]="email" [ngModelOptions]="{standalone: true}"
+              id="emailuser" />
+      </div>
+      <div>
+          <label for="emailuser">Contraseña: </label>
+          <input type="email" class="form-control" [(ngModel)]="password" [ngModelOptions]="{standalone: true}"
+              id="emailuser" />
+      </div>
+      <div class="mb-3">
+          <label for="emailuser">Confirme Contraseña: </label>
+          <input type="email" class="form-control" [(ngModel)]="password" [ngModelOptions]="{standalone: true}"
+              id="emailuser" />
+      </div>
+
+
+      <input type="button" class="m-3 btn btn-success" (click)="signup()" value="Registrar" />
+  </form>
+</div>

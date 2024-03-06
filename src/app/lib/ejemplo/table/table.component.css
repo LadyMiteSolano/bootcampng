@@ -1,0 +1,12 @@
+/* styles.css */
+
+/* Estilo de fondo de tabla para cada fila */
+.Producto {
+  background-color: skyblue; /* Cambia este valor al color deseado */
+}
+
+/* Estilo de fondo de tabla para cada columna */
+.ProductoAgg{
+  background-color: palevioletred; /* Cambia este valor al color deseado */
+}
+

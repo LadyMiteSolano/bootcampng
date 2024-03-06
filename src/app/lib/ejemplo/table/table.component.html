@@ -1,0 +1,80 @@
+<div>
+  <div class="d-flex justify-content-around">
+
+      <h2>Productos disponibles</h2>
+  </div>
+  <div class="d-flex justify-content-around">
+      <div>
+          <table class=" form-control table">
+              <thead>
+                  <tr>
+                      <th>Producto</th>
+                      <th>Modelo</th>
+                      <th>Proveedor</th>
+                      <th>Precio</th>
+                      <th>Stock</th>
+                      <th>Acciones</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr *ngFor="let producto of listaproducto">
+                      <td> {{ producto.producto }}</td>
+                      <td> {{ producto.modelo }}</td>
+                      <td> {{ producto.proveedor }}</td>
+                      <td> {{ producto.precio }}</td>
+                      <td> {{ producto.stock }}</td>
+                      <td> <input *ngIf="validarStock(producto)" type="button"  class="btn btn-primary mh-100" value="Agregar" (click)="agregarProducto(producto)"/><input *ngIf="!validarStock(producto)" type="button"  class="btn btn-primary mh-100" value="Agregar" (click)="agregarProducto(producto)" disabled/></td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+  </div>
+<div>
+  <div class="d-flex justify-content-around">
+
+      <h2>Productos del carrito</h2>
+  </div>
+<div>
+
+  <div class="d-flex justify-content-around">
+      <div>
+
+          <table class="table form-control">
+              <thead>
+                  <tr>
+                      <th>Producto</th>
+                      <th>Modelo</th>
+                      <th>Proveedor</th>
+                      <th>Precio</th>
+                      <th>Cantidad</th>
+                      <th>Acciones</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr *ngFor="let producto of listaCarrito">
+                      <td> {{ producto.producto }}</td>
+                      <td> {{ producto.modelo }}</td>
+                      <td> {{ producto.proveedor }}</td>
+                      <td> {{ producto.precio }}</td>
+                      <th> {{ producto.cantidad }}</th>
+                      <td> <input type="button"  class="btn btn-danger" value="Eliminar" (click)="eliminarProducto(producto)"/> </td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+      </div>
+  </div>
+</div>
+<div class="flex-row-reverse">
+  <div class="d-flex flex-column w-25 position-absolute end-0 p-10">
+      <label for="totalproductos">Total Productos</label>
+      <input type="text" class="form-control" value="0" [(ngModel)]="totalProductos" id="totalproductos" readonly/>
+      <label for="subtotal">Subtotal</label>
+      <input type="text" class="form-control" value="0" [(ngModel)]="subtotal" id="subtotal" readonly/>
+      <label for="impuestos">Impuesto 12%</label>
+      <input type="text" class="form-control" value="0" [(ngModel)]="impuesto" id="impuestos" readonly/>
+      <label for="totalpago">Total a pagar</label>
+      <input type="text" class="form-control" value="0" [(ngModel)]="totalPago" id="totalpago" readonly/>
+  </div>
+</div>
+</div>
